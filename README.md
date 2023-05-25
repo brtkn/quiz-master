@@ -2,6 +2,8 @@
 
 ## Live Demo [Quiz Master](https://646f2780a13e222a2297ec58--magnificent-semolina-3b2a47.netlify.app/)
 
+![This is a tenzies game image](/assets/questions.png)
+
 This is a React project that utilizes the Trivia API to create an interactive quiz application. It makes use of React hooks, such as `useState` and `useEffect`, for state management and handling side effects.
 
 ## Features
