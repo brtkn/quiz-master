@@ -64,7 +64,9 @@ export default function Question({
         const decodedQuestion = decodeHTML(item.question);
         return (
           <div className="question-container  p-4" key={item.question}>
-            <div className="question text-xl font-bold">{decodedQuestion}</div>
+            <div className="question text-xl font-bold mb-1">
+              {decodedQuestion}
+            </div>
             <div className="answer grid grid-cols-2">
               {item.answers.map((ans) => {
                 return (
@@ -85,9 +87,9 @@ export default function Question({
           </div>
         );
       })}
-      <div className="grid grid-cols-2">
+      <div className="grid grid-cols">
         <button
-          className="bg-blue-500 border-solid border-2 border-green-500 p-4 text-cyan-50 font-extrabold active:bg-slate-500 m-8 focus:outline-none hover:shadow-xl rounded-xl block mx-auto"
+          className="bg-blue-500 border-solid border-2 border-green-500 p-4 text-cyan-50 font-extrabold active:bg-slate-500 m-5 focus:outline-none hover:shadow-xl rounded-xl block mx-auto"
           onClick={checkAnswers}
         >
           Check Answers{" "}
@@ -98,7 +100,7 @@ export default function Question({
           )}
         </button>
         <button
-          className="bg-blue-500 border-solid border-2 border-green-500 p-4 text-cyan-50 font-extrabold active:bg-slate-500 m-8 focus:outline-none hover:shadow-xl rounded-xl block mx-auto"
+          className="bg-blue-700 border-solid border-2 border-green-500 p-4 text-cyan-50 font-extrabold active:bg-slate-500 m-5 focus:outline-none hover:shadow-xl rounded-xl block mx-auto"
           onClick={newSetOfQuestions}
         >
           New Questions
