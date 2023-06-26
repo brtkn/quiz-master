@@ -1,6 +1,6 @@
 # Trivia Quiz Application
 
-## Live Demo [Quiz Master](https://646f2780a13e222a2297ec58--magnificent-semolina-3b2a47.netlify.app/)
+## Live Demo [Quiz Master](https://magnificent-semolina-3b2a47.netlify.app/)
 
 ![This is a tenzies game image](/assets/questions.png)
 
