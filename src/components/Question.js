@@ -57,8 +57,12 @@ export default function Question({
   return (
     <div className="h-screen  mt-8">
       <h2 className="text-white font-bold text-center text-2xl">
-        After finishing answering the 5 questions, click the "Check Answers"
-        button to see the result.
+        Click the "Check Answers" button to see the result.
+        {showResults && (
+          <div className="text-3xl text-center p-2">
+            Correct Answers: {correctAnswersCount}/{trivia.length}
+          </div>
+        )}
       </h2>
       {trivia.map((item) => {
         const decodedQuestion = decodeHTML(item.question);
@@ -67,7 +71,7 @@ export default function Question({
             <div className="question text-xl font-bold mb-1">
               {decodedQuestion}
             </div>
-            <div className="answer grid grid-cols-2">
+            <div className="answer grid grid-cols-2 gap-1">
               {item.answers.map((ans) => {
                 return (
                   <Answer
@@ -108,7 +112,7 @@ export default function Question({
       </div>
 
       {showResults && (
-        <div className="text-3xl text-center p-3">
+        <div className="text-2xl text-center p-3">
           Correct Answers: {correctAnswersCount}/{trivia.length}
         </div>
       )}
